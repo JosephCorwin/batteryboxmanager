@@ -1,0 +1,22 @@
+<% provide(:title, "Battery | #{@battery.lbid}")%>
+
+<%= link_to "Back to Batteries", batteries_path %>
+
+<h1><%= @battery.lbid %> | <%= link_to "#{@battery.battery_type.name}", @battery.battery_type %> | <%= link_to "#{@battery.rider.name}", @battery.rider %></h1>
+
+<h3><%= @battery.age %></h3>
+
+<h2>Specs</h2>
+<h5>Amp Hours:<%= @battery.battery_type.amp_hours %> </h5>
+<h5>Nominal Voltage: <%= @battery.battery_type.nominal_voltage %> </h5>
+<h5>Cell Type: <%= @battery.battery_type.cell_type %> </h5>
+<h5>Input Connector: <%= @battery.input_connector %></h5>
+<h5>Output Connector: <%= @battery.output_connector %></h5>
+<h5>Case Material: <%= @battery.case_material %></h5>
+<h5>Padding Type: <%= @battery.padding_type %></h5>
+<h2>Notes</h2>
+<p><%= @battery.notes %></p>
+
+<%= link_to "Edit", edit_battery_path(@battery) %>
+
+<%= link_to "Delete this battery", @battery, method: "delete", data: { confirm: "Are you sure?"} %>

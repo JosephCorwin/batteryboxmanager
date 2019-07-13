@@ -1,0 +1,19 @@
+<% provide(:title, "Riders | #{@rider.name}")%>
+
+<%= link_to "Back to Riders", riders_path %>
+
+<h1><%= @rider.name %> | <%= @rider.lbid %></h1>
+<h4><%= @rider.phone_number %> | <%= @rider.email %></h4>
+<%= link_to "Delete this rider and all their shit", @rider, method: "delete", data: { confirm: "Are you sure?"} %>
+
+<h2>Batteries</h2>
+<%= link_to "Add Battery", new_battery_path %>
+<% @rider.batteries.each do |b| %>
+	<div><%= link_to b.lbid, b %></div>
+<% end %>
+
+<h2>Chargers</h2>
+<%= link_to "Add charger", new_charger_path %>
+<% @rider.chargers.each do |c| %>
+	<div><%= link_to c.lbid, c %></div>
+<% end %>

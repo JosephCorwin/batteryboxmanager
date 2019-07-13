@@ -1,0 +1,44 @@
+<% provide(:title, "Batteries")%>
+
+<h1>Batteries</h1>
+
+<%= link_to "Add Battery", new_battery_path %>
+
+<table>
+  <tr>
+    <td>
+      <h2>LBID</h2>
+    </td>
+    <td>
+      <h2>Last Updated</h2>
+    </td>
+    <td>
+      <h2>Battery Type</h2>
+    </td>
+    <td>
+      <h2>Owner</h2>
+    </td>
+  </tr>
+
+    <% @batteries.each do |b| %>
+
+	  <tr>
+	    <td>
+	      <h3><%= link_to b.lbid, b %></h3>
+	    </td>
+	    <td>
+	      <h3><%= b.updated_at.to_formatted_s(:short) %></h3>
+	    </td>
+	    <td>
+	      <h3><%= b.battery_type.name %></h3>
+	    </td>
+	    <td>
+	      <h3><%= b.rider.name %></h3>
+	    <td>
+	      <%= link_to "Edit", edit_battery_path(b) %>
+	    </td>
+	  </tr>
+  
+    <% end %>
+
+</table>

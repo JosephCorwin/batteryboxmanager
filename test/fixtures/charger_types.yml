@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  voltage_output: MyString
+  amperage_output: MyString
+  grounded: false
+  connector_type: MyString
+
+two:
+  name: MyString
+  description: MyString
+  voltage_output: MyString
+  amperage_output: MyString
+  grounded: false
+  connector_type: MyString

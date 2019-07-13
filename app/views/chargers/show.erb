@@ -1,0 +1,9 @@
+<% provide(:title, "Charger | #{@charger.lbid}")%>
+
+<%= link_to "Back to Chargers", chargers_path %>
+
+<h1><%= @charger.lbid %> | <%= @charger.charger_type.name %> | <%= @charger.rider.name %></h1>
+
+<h2>This charger exists!</h2>
+
+<%= link_to "Delete this charger", @charger, method: "delete", data: {confirm: "Are you sure?"} %>

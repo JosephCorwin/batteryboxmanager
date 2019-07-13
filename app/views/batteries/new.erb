@@ -1,0 +1,44 @@
+<% provide(:title, "New Battery")%>
+
+<%= form_for(@battery) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+
+    <%= f.label :lbid %>
+    <%= f.text_field :lbid, class: '' %>
+
+    <%= f.label :battery_type_id %>
+    <%= f.select :battery_type_id, BatteryType.all.collect{|bt| [bt.name, bt.id]} %>
+
+    <%= f.label :inspection_grade %>
+    <%= f.select :inspection_grade, options_for_select([["A", "A"],["B","B"]]) %>
+
+    <%= f.label :rider_id %>
+    <%= f.select :rider_id, Rider.all.collect{|r| [r.name, r.id]} %>
+
+    <%= f.label :rental %>
+    <%= f.select :rental, options_for_select([["No", false],["Yes", true]]) %>
+
+    <%= f.label :rental_owner %>
+    <%= f.text_field :rental_owner %>
+
+    <%= f.label :output_connector %>
+    <%= f.text_field :output_connector %>
+
+    <%= f.label :input_connector %>
+    <%= f.text_field :input_connector %>
+
+    <%= f.label :case_material %>
+    <%= f.text_field :case_material %>
+
+    <%= f.label :padding_type %>
+    <%= f.text_field :padding_type %>
+
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+
+    <%= f.submit "Add Battery", class: "" %>
+<% end %>

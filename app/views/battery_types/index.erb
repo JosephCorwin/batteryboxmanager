@@ -1,0 +1,48 @@
+<% provide(:title, "Battery Type")%>
+
+<h1>Battery Types</h1>
+
+<%= link_to "Add Battery Type", new_battery_type_path %>
+
+<table>
+  <tr>
+    <td>
+      <h2>Name</h2>
+    </td>
+    <td>
+      <h2>Description</h2>
+    </td>
+    <td>
+      <h2>Cells</h2>
+    </td>
+    <td>
+      <h2>Voltages (min/nom/max)</h2>
+    </td>
+    <td>
+      <h2>Amp Hours</h2>
+    </td>
+    <td>
+  </tr>
+
+    <% @battery_types.each do |bt| %>
+
+	  <tr>
+	    <td>
+	      <h3><%= link_to bt.name, bt %></h3>
+	    </td>
+	    <td>
+	      <h3><%= bt.description %></h3>
+	    </td>
+	    <td>
+	      <h3><%= bt.cell_type %> / <%= bt.cell_count%></h3>
+	    </td>
+	    <td>
+	      <h3><%= bt.minimum_voltage%> / <%= bt.nominal_voltage%> / <%= bt.maximum_voltage%></h3>
+	    <td>
+	      <%= link_to "Edit", edit_battery_type_path(bt) %>
+	    </td>
+	  </tr>
+  
+    <% end %>
+
+</table>

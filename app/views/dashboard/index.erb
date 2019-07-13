@@ -1,0 +1,16 @@
+There are <%= @check_ins %> batteries in the box
+
+<%= form_for(@search, url: search_path) do |f| %>
+
+    <%= f.label :rider %>
+	<%= f.text_field :rider %>
+
+	<%= f.label :battery %>
+	<%= f.text_field :battery %>
+
+	<%= f.label :charger %>
+	<%= f.text_field :charger %>
+
+	<%= f.submit "Search" %> 
+
+<% end %>

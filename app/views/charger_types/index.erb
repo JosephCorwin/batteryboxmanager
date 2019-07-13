@@ -1,0 +1,54 @@
+<% provide(:title, "Charger Types")%>
+
+<h1>Charger Types</h1>
+
+<%= link_to "Add Charger Type", new_charger_type_path %>
+
+<table>
+  <tr>
+    <td>
+      <h2>Name</h2>
+    </td>
+    <td>
+      <h2>Description</h2>
+    </td>
+    <td>
+      <h2>Voltage</h2>
+    </td>
+    <td>
+      <h2>Amperage</h2>
+    </td>
+    <td>
+      <h2>Grounded</h2>
+    </td>
+    <td>
+      <h2>Connector Type</h2>
+    </td>
+  </tr>
+
+    <% @charger_types.each do |ct| %>
+
+	  <tr>
+	    <td>
+	      <h3><%= link_to ct.name, ct %></h3>
+	    </td>
+	    <td>
+	      <h3><%= ct.description %></h3>
+	    </td>
+	    <td>
+	      <h3><%= ct.voltage_output %></h3>
+	    </td>
+	    <td>
+	      <h3><%= ct.amperage_output %></h3>
+	    <td>
+	    <td>
+	      <h3><%= ct.grounded %></h3>
+	    </td>
+	      <%= link_to "Edit", "#{ct.id}/edit" %>
+	 	  <%= link_to "Delete", ct, method: "delete", data: { confirm: "Are you sure?" } %>
+        </td>
+	  </tr>
+  
+    <% end %>
+
+</table>

@@ -1,0 +1,2 @@
+module ChargerTypeHelper
+end

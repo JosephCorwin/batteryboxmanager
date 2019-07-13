@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | BatteryBoxManager</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to :dashboard, root_path %>
+    <%= link_to :riders, riders_path %>
+    <%= link_to :chargers, chargers_path %>
+    <%= link_to :charger_types, charger_types_path %>
+    <%= link_to :batteries, batteries_path %>
+    <%= link_to :battery_types, battery_types_path %>
+    <%= link_to :check_ins, check_ins_path %>
+
+    <br><br>
+    <%= yield %>
+  </body>
+</html>

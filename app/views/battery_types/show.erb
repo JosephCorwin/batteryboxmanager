@@ -1,0 +1,18 @@
+
+	      <h3><%= @battery_type.name %></h3>
+
+	      <h3><%= @battery_type.description %></h3>
+
+	      <h3>Cell Type: <%= @battery_type.cell_type %> | <%= @battery_type.cell_count%> Cells</h3>
+
+	      <h3>Minimum Voltage: <%= @battery_type.minimum_voltage%>v</h3>
+
+	      <h3>BMS: <% if @battery_type.bms_present %>Yes<% else %>No<% end %>
+
+	      <h3>Nominal Voltage: <%= @battery_type.nominal_voltage%>v</h3>
+
+	      <h3>Maximum Voltage: <%= @battery_type.maximum_voltage%>v</h3>
+
+
+	      <%= link_to "Edit", edit_battery_type_path(@battery_type) %>
+	      <%= link_to "Delete", @battery_type, data: {confirm: "Are you sure?"} %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cell_type: MyString
+  cell_count: 1
+  bms_present: false
+  nominal_volatage: 9.99
+  minimum_voltage: 9.99
+  maximum_voltage: 9.99
+  amp_hours: 1
+
+two:
+  name: MyString
+  description: MyString
+  cell_type: MyString
+  cell_count: 1
+  bms_present: false
+  nominal_volatage: 9.99
+  minimum_voltage: 9.99
+  maximum_voltage: 9.99
+  amp_hours: 1

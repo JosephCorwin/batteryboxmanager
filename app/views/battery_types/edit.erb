@@ -1,0 +1,37 @@
+<% provide(:title, "Edit Battery Type")%>
+
+<%= form_for(@battery_type) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: '' %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :cell_type %>
+    <%= f.text_field :cell_type %>
+
+    <%= f.label :cell_count %>
+    <%= f.text_field :cell_count %>
+
+    <%= f.label :bms_present %>
+    <%= f.select :bms_present, options_for_select([["Yes", true],["No", false]])  %>
+
+    <%= f.label :nominal_voltage %>
+    <%= f.text_field :nominal_voltage %>
+
+    <%= f.label :maximum_voltage %>
+    <%= f.text_field :maximum_voltage %>
+
+    <%= f.label :minumum_voltage %>
+    <%= f.text_field :minimum_voltage %>
+
+    <%= f.label :amp_hours %>
+    <%= f.text_field :amp_hours %>
+
+
+
+    <%= f.submit "Update Battery Type", class: "" %>
+<% end %>

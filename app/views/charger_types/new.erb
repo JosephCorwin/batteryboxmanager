@@ -1,0 +1,25 @@
+<% provide(:title, "New Charger Type")%>
+
+<%= form_for(@charger_type) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: '' %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :voltage_output %>
+    <%= f.text_field :voltage_output %>
+
+    <%= f.label :amperage_output %>
+    <%= f.text_field :amperage_output %>
+
+    <%= f.label :grounded %>
+    <%= f.select :grounded, options_for_select([["No", false],["Yes", true]])  %>
+
+
+
+    <%= f.submit "Add Battery Type", class: "" %>
+<% end %>

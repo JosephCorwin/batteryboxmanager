@@ -1,0 +1,21 @@
+<% provide(:title, "New Rider")%>
+
+<%= form_for(@rider) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: '' %>
+
+    <%= f.label :lbid %>
+    <%= f.text_field :lbid, class: '' %>
+
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, class: '' %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email, class: '' %>
+
+    <%= f.submit "Add Rider", class: "" %>
+
+<% end %>

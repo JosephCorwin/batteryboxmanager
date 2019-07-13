@@ -1,0 +1,5 @@
+<ul>
+<% @logs.each do |l| %>
+<li><%= link_to l.rider.name %> | <%= link_to l.battery.lbid %> | <%= link_to l.charger.lbid %> | <%= l.section.name %> | <%= l.log_type %> | <%= l.created_at %></li>
+<% end %>
+</ul>

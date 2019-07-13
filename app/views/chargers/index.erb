@@ -1,0 +1,44 @@
+<% provide(:title, "Chargers")%>
+
+<h1>Chargers</h1>
+
+<%= link_to "Add Charger", new_charger_path %>
+
+<table>
+  <tr>
+    <td>
+      <h2>LBID</h2>
+    </td>
+    <td>
+      <h2>Last Updated</h2>
+    </td>
+    <td>
+      <h2>Charger Type</h2>
+    </td>
+    <td>
+      <h2>Owner</h2>
+    </td>
+  </tr>
+
+    <% @chargers.each do |c| %>
+
+	  <tr>
+	    <td>
+	      <h3><%= link_to c.lbid, c %></h3>
+	    </td>
+	    <td>
+	      <h3><%= c.updated_at.to_formatted_s(:short) %></h3>
+	    </td>
+	    <td>
+	      <h3><%= c.charger_type.name %></h3>
+	    </td>
+	    <td>
+	      <h3><%= c.rider.name %></h3>
+	    <td>
+	      <%= link_to "Edit", "#{c.id}/edit" %>
+	    </td>
+	  </tr>
+  
+    <% end %>
+
+</table>
