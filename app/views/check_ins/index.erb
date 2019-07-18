@@ -1,14 +1,4 @@
 <% provide(:title, "Check Ins") %>
 
-<%= link_to "New Check In", new_check_in_path %>
+Did you mean to <%= link_to "Check In a Battery", new_check_in_path %>
 
-<h1>Batteries in the Box</h1>
-<% @check_ins.each do |ci| %>
-
-<h3><%= link_to ci.rider.name, ci.rider %> | 
-    <%= link_to ci.battery.lbid, ci.battery %> | 
-    <%= link_to ci.charger.lbid, ci.charger %> | 
-    <%= ci.section.name %>
-     ||| <%= link_to "Check Out", ci, method: "delete", data: {confirm: "Are you sure?"} %></h3>
-
-<% end %>

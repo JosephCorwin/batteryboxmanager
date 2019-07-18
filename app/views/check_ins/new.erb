@@ -3,16 +3,16 @@
 <%= form_for(@check_in) do |f| %>
 
     <%= f.label :rider_id %>
-    <%= f.select :rider_id, Rider.all.collect{|r| [r.name, r.id]} %>
+    <%= f.select :rider_id, Rider.all.map { |r| [r.name, r.id] } %>
         
     <%= f.label :battery_id %>
-    <%= f.select :battery_id, Battery.all.collect{|b| [b.lbid, b.id]} %>
+    <%= f.select :battery_id, Battery.all.map { |b| [b.lbid, b.id] } %>
 
     <%= f.label :charger_id %>
-    <%= f.select :charger_id, Charger.all.collect{|c| [c.lbid, c.id]} %>
+    <%= f.select :charger_id, Charger.all.map { |c| [c.lbid, c.id] } %>
 
     <%= f.label :section_id %>
-    <%= f.select :section_id, Section.all.collect{|s| [s.name, s.id]} %>
+    <%= f.select :section_id, Section.all.map { |s| [s.name, s.id] } %>
 
     <%= f.submit "Check In" %>
 

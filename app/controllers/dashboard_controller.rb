@@ -1,7 +1,8 @@
 class DashboardController < ApplicationController
 
    def index
-   	  @check_ins = CheckIn.count
+   	  @check_ins = CheckIn.all()
+        @check_in_count = CheckIn.count
    	  @search = Search.new
    end
 
