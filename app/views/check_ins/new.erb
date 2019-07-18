@@ -2,17 +2,20 @@
 
 <%= form_for(@check_in) do |f| %>
 
+    <div>
     <%= f.label :rider_id %>
-    <%= f.select :rider_id, Rider.all.map { |r| [r.name, r.id] } %>
-        
+    <%= f.collection_select :rider_id, Rider.order(:name), :id, :name, include_blank: true %>
+    </div>
+
+    <div>    
     <%= f.label :battery_id %>
-    <%= f.select :battery_id, Battery.all.map { |b| [b.lbid, b.id] } %>
+    <%= f.collection_select :battery_id, Battery.order(:lbid), :id, :lbid, include_blank: true %>
+    </div>
 
+    <div>
     <%= f.label :charger_id %>
-    <%= f.select :charger_id, Charger.all.map { |c| [c.lbid, c.id] } %>
-
-    <%= f.label :section_id %>
-    <%= f.select :section_id, Section.all.map { |s| [s.name, s.id] } %>
+    <%= f.collection_select :charger_id, Charger.order(:lbid), :id, :lbid, include_blank: true %>
+    </div>
 
     <%= f.submit "Check In" %>
 
