@@ -66,6 +66,13 @@ class BatteriesController < ApplicationController
     end
   end
 
+  def owned_by
+    @selected = Battery.where(:rider_id => params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
 private
 
     def battery_params

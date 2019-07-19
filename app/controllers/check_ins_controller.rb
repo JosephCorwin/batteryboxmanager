@@ -17,21 +17,21 @@ class CheckInsController < ApplicationController
 	end
 
 	def create
-		@check_in = CheckIn.new(params.require(:check_in).permit(:rider_id, :battery_id, :charger_id, :section_id))
+		@check_in = CheckIn.new(params.require(:check_in).permit(:rider_id, :battery_id, :charger_id))
 		if @check_in.save
 			Log.create(rider_id:   @check_in.rider_id,
 					   battery_id: @check_in.battery_id,
 					   charger_id: @check_in.charger_id,
 					   section_id: @check_in.section_id,
 					   log_type:   "Check In")
-			redirect_to check_ins_path
+			redirect_to root_path
 		end
 	end
 
 	def update
 		@check_in = CheckIn.find(params[:id])
-		if @check_in.update(params.require(:check_in).permit(:rider_id, :battery_id, :charger_id, :section_id))
-			redirect_to @check_in
+		if @check_in.update(params.require(:check_in).permit(:rider_id, :battery_id, :charger_id))
+			redirect_to root_path
 		end
 	end
 

@@ -9,12 +9,12 @@
 
     <div>    
     <%= f.label :battery_id %>
-    <%= f.collection_select :battery_id, Battery.order(:lbid), :id, :lbid, include_blank: true %>
+    <%= f.grouped_collection_select :battery_id, Rider.order(:name), :batteries,:name, :id, :lbid, include_blank: true %>
     </div>
 
     <div>
     <%= f.label :charger_id %>
-    <%= f.collection_select :charger_id, Charger.order(:lbid), :id, :lbid, include_blank: true %>
+    <%= f.grouped_collection_select :charger_id, Rider.order(:name), :chargers, :name, :id, :lbid, include_blank: true %>
     </div>
 
     <%= f.submit "Check In" %>

@@ -5,10 +5,8 @@
 
 <h3><%= link_to ci.rider.name, ci.rider %> | 
     <%= link_to ci.battery.lbid, ci.battery %> | 
-    <%= link_to ci.charger.lbid, ci.charger %> | 
-    <%= ci.section.name %>
-     ||| <%= link_to "Check Out", ci, method: "delete", data: {confirm: "Are you sure?"} %></h3>
-
+    <%= link_to ci.charger.lbid, ci.charger %> ||| 
+    <%= link_to "Check Out", ci, method: "delete", data: {confirm: "Are you sure?"} %></h3>
 <% end %>
 
 <h1>Search by ID</h1>
