@@ -2,8 +2,7 @@
 
 <h1>Batteries</h1>
 
-<%= link_to "Add Battery", new_battery_path %>
-<%= link_to "Add Battery Type", battery_types_path %>
+<%= link_to "Battery Types", battery_types_path %>
 
 <table>
   <tr>
@@ -34,9 +33,9 @@
 	      <h3><%= b.battery_type.name %></h3>
 	    </td>
 	    <td>
-	      <h3><%= b.rider.name %></h3>
+	      <h3><%= link_to b.rider.name, b.rider %></h3>
 	    <td>
-	      <%= link_to "Edit", edit_battery_path(b) %>
+	      <%= link_to "Edit", edit_rider_battery_path(b.rider_id, b.id) %>
 	    </td>
 	  </tr>
   

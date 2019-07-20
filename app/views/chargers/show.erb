@@ -2,8 +2,9 @@
 
 <%= link_to "Back to Chargers", chargers_path %>
 
-<h1><%= @charger.lbid %> | <%= @charger.charger_type.name %> | <%= @charger.rider.name %></h1>
-
-<h2>This charger exists!</h2>
+<h1><%= @charger.lbid %> | 
+    <%= @charger.charger_type.name %> | 
+    <%= @charger.connector_type %> | 
+    <%= @rider.name %></h1>
 
 <%= link_to "Delete this charger", @charger, method: "delete", data: {confirm: "Are you sure?"} %>

@@ -2,8 +2,7 @@
 
 <h1>Chargers</h1>
 
-<%= link_to "Add Charger", new_charger_path %>
-<%= link_to "Add Charger Types", charger_types_path %>
+<%= link_to "Charger Types", charger_types_path %>
 
 <table>
   <tr>
@@ -34,9 +33,9 @@
 	      <h3><%= c.charger_type.name %></h3>
 	    </td>
 	    <td>
-	      <h3><%= c.rider.name %></h3>
+	      <h3><%= link_to c.rider.name, c.rider %></h3>
 	    <td>
-	      <%= link_to "Edit", "#{c.id}/edit" %>
+	      <%= link_to "Edit", edit_rider_charger_path( c.rider_id, c.id ) %>
 	    </td>
 	  </tr>
   

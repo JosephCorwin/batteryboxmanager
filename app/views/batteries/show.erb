@@ -2,7 +2,9 @@
 
 <%= link_to "Back to Batteries", batteries_path %>
 
-<h1><%= @battery.lbid %> | <%= link_to "#{@battery.battery_type.name}", @battery.battery_type %> | <%= link_to "#{@battery.rider.name}", @battery.rider %></h1>
+<h1><%= @battery.lbid %> | 
+    <%= link_to "#{@battery.battery_type.name}", @battery.battery_type %> | 
+    <%= link_to @rider.name, @rider %></h1>
 
 <h3><%= @battery.age %></h3>
 
@@ -17,6 +19,6 @@
 <h2>Notes</h2>
 <p><%= @battery.notes %></p>
 
-<%= link_to "Edit", edit_battery_path(@battery) %>
+<%= link_to "Edit", edit_rider_battery_path(@rider.id, @battery.id) %>
 
 <%= link_to "Delete this battery", @battery, method: "delete", data: { confirm: "Are you sure?"} %>

@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
   post 'search', to: 'dashboard#search' 
 
-  resources :riders
-  resources :batteries
-  resources :chargers
+  resources :riders do
+    resources :batteries, only: [ :new, :edit, :create, :update ] 
+    resources :chargers , only: [ :new, :edit, :create, :update ] 
+  end
+  resources :batteries, only: [ :index, :show, :destroy ]
+  resources :chargers , only: [ :index, :show, :destroy ]
   resources :battery_types
   resources :charger_types
   resources :logs

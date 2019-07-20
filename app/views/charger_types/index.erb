@@ -44,9 +44,10 @@
 	    <td>
 	      <h3><%= ct.grounded %></h3>
 	    </td>
-	      <%= link_to "Edit", "#{ct.id}/edit" %>
+      <td>
+	    <%= link_to "Edit", "#{ct.id}/edit" %>
 	 	  <%= link_to "Delete", ct, method: "delete", data: { confirm: "Are you sure?" } %>
-        </td>
+      </td>
 	  </tr>
   
     <% end %>

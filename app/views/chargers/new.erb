@@ -1,6 +1,7 @@
 <% provide(:title, "New Charger")%>
 
-<%= form_for(@charger) do |f| %>
+<%= form_for( [@rider, @charger] ) do |f| %>
+
     <%= render 'shared/error_messages' %>
 
 
@@ -8,13 +9,11 @@
     <%= f.text_field :lbid, class: '' %>
 
     <%= f.label :charger_type_id %>
-    <%= f.select :charger_type_id, ChargerType.all.collect{|ct| [ct.name, ct.id]} %>
-
-    <%= f.label :rider_id %>
-    <%= f.select :rider_id, Rider.all.collect{|r| [r.name, r.id]} %>
+    <%= f.select :charger_type_id, ChargerType.all.collect{ |ct| [ct.name, ct.id] } %>
 
     <%= f.label :connector_type %>
     <%= f.text_field :connector_type %>
 
     <%= f.submit "Add Charger", class: "" %>
+
 <% end %>
