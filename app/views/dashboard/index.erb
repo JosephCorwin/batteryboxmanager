@@ -1,14 +1,16 @@
 <h2>There are <%= @check_in_count %> batteries charging in the box</h2>
 
 <h1>Batteries currently charging</h1>
+
+<table>
 <% @check_ins.each do |ci| %>
-
-<h3><%= link_to ci.rider.name, ci.rider %> | 
-    <%= link_to ci.battery.lbid, ci.battery %> | 
-    <%= link_to ci.charger.lbid, ci.charger %> ||| 
-    <%= link_to "Check Out", ci, method: "delete", data: {confirm: "Are you sure?"} %></h3>
+<tr>
+  <td><%= link_to ci.rider.name, ci.rider %></td><td>|</td>
+  <td><%= link_to ci.battery.lbid, ci.battery %></td><td>|</td>
+  <td><%= link_to ci.charger.lbid, ci.charger %></td><td>|</td>
+  <td><%= link_to "Check Out", ci, method: "delete", data: {confirm: "Are you sure?"} %></td>
 <% end %>
-
+</table>
 <h1>Search by ID</h1>
 <%= form_for(@search, url: search_path) do |f| %>
 

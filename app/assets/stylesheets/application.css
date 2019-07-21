@@ -30,9 +30,54 @@ select {
 body {
 	padding: 0;
 	margin: 0;
+	font-family: "Sans Serif"
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #fafafa;
+}
+
+tr:nth-child(odd) {
+	background-color: #dfdfdf;
+}
+
+a, input, select {
+	display: inline-block;
+	padding: 0.25em;
+	border: 0;
+	background: #ddd;
+	color: #333;
+	text-decoration: none;
 }
 
 
+tr a {
+	display: block;
+	width: 100%;
+	padding: 0;
+	background: 0;
+	text-align: center;
+	color: #555;
+}
+
+a:visited {
+	color: #333;
+}
+
+a:hover {
+	background: #999;
+	color: #fefefe;
+}
+
+tr a:hover {
+	color: #666;
+	background: 0;
+}
 
 #container {
 	padding: 7%;
@@ -61,3 +106,4 @@ body {
     background: #fefefe;
     color: #000;
 }
+

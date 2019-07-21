@@ -16,7 +16,7 @@
     <%= f.label :charger_id %>
     <%= f.grouped_collection_select :charger_id, Rider.order(:name), :chargers, :name, :id, :lbid, include_blank: true %>
     </div>
-
+    <br>
     <%= f.submit "Check In" %>
 
 <% end %>

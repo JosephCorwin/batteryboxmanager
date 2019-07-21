@@ -7,22 +7,22 @@
 <table>
   <tr>
     <td>
-      <h2>Name</h2>
+      <h4>Name</h4>
     </td>
     <td>
-      <h2>Description</h2>
+      <h4>Description</h4>
     </td>
     <td>
-      <h2>Voltage</h2>
+      <h4>Voltage</h4>
     </td>
     <td>
-      <h2>Amperage</h2>
+      <h4>Amperage</h4>
     </td>
     <td>
-      <h2>Grounded</h2>
+      <h4>Grounded</h4>
     </td>
     <td>
-      <h2>Connector Type</h2>
+      <h4>Connector Type</h4>
     </td>
   </tr>
 
@@ -30,19 +30,19 @@
 
 	  <tr>
 	    <td>
-	      <h3><%= link_to ct.name, ct %></h3>
+	      <%= link_to ct.name, ct %>
 	    </td>
 	    <td>
-	      <h3><%= ct.description %></h3>
+	      <%= ct.description %>
 	    </td>
 	    <td>
-	      <h3><%= ct.voltage_output %></h3>
+	      <%= ct.voltage_output %>
 	    </td>
 	    <td>
-	      <h3><%= ct.amperage_output %></h3>
+	      <%= ct.amperage_output %>
 	    <td>
 	    <td>
-	      <h3><%= ct.grounded %></h3>
+	      <%= ct.grounded %>
 	    </td>
       <td>
 	    <%= link_to "Edit", edit_charger_type_path(ct)" %>

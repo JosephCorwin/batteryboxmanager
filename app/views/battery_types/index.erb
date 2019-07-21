@@ -7,19 +7,19 @@
 <table>
   <tr>
     <td>
-      <h2>Name</h2>
+      <h4>Name</h4>
     </td>
     <td>
-      <h2>Description</h2>
+      <h4>Description</h4>
     </td>
     <td>
-      <h2>Cells</h2>
+      <h4>Cells</h4>
     </td>
     <td>
-      <h2>Voltages (min/nom/max)</h2>
+      <h4>Voltages (min/nom/max)</h4>
     </td>
     <td>
-      <h2>Amp Hours</h2>
+      <h4>Amp Hours</h4>
     </td>
     <td>
   </tr>
@@ -28,16 +28,16 @@
 
 	  <tr>
 	    <td>
-	      <h3><%= link_to bt.name, bt %></h3>
+	      <%= link_to bt.name, bt %>
 	    </td>
 	    <td>
-	      <h3><%= bt.description %></h3>
+	      <%= bt.description %>
 	    </td>
 	    <td>
-	      <h3><%= bt.cell_type %> / <%= bt.cell_count%></h3>
+	      <%= bt.cell_type %> / <%= bt.cell_count%>
 	    </td>
 	    <td>
-	      <h3><%= bt.minimum_voltage%> / <%= bt.nominal_voltage%> / <%= bt.maximum_voltage%></h3>
+	      <%= bt.minimum_voltage%> / <%= bt.nominal_voltage%> / <%= bt.maximum_voltage %>
 	    <td>
 	      <%= link_to "Edit", edit_battery_type_path(bt) %>
         <%= link_to "Delete", bt, method: "delete", data: { confirm: "Are you sure?" } %>

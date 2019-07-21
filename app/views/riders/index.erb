@@ -7,19 +7,19 @@
 <table>
   <tr>
     <td>
-      <h2>Name</h2>
+      <h4>Name</h4>
     </td>
     <td>
-      <h2>Last Updated</h2>
+      <h4>Last Updated</h4>
     </td>
     <td>
-      <h2>Batteries Owned</h2>
+      <h4>Batteries Owned</h4>
     </td>
     <td>
-      <h2>Chargers Owned</h2>
+      <h4>Chargers Owned</h4>
     </td>
     <td>
-      <h2>Active Check-Ins</h2>
+      <h4>Active Check-Ins</h4>
     </td>
   </tr>
 
@@ -27,19 +27,19 @@
 
 	  <tr>
 	    <td>
-	      <h3><%= link_to r.name, r %></h3>
+	      <%= link_to r.name, r %>
 	    </td>
 	    <td>
-	      <h3><%= r.updated_at.to_formatted_s(:short) %></h3>
+	      <%= r.updated_at.to_formatted_s(:short) %>
 	    </td>
 	    <td>
-	      <h3><%= r.batteries.count %></h3>
+	      <%= r.batteries.count %>
 	    </td>
 	    <td>
-	      <h3><%= r.chargers.count %></h3>
+	      <%= r.chargers.count %>
 	    </td>
 	    <td>
-	      <h3> (coming soon) </h3>
+	      (coming soon) 
 	    <td>
 	      <%= link_to "Edit", edit_rider_path(r) %>
 	    </td>

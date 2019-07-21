@@ -7,16 +7,16 @@
 <table>
   <tr>
     <td>
-      <h2>LBID</h2>
+      <h4>LBID</h4>
     </td>
     <td>
-      <h2>Last Updated</h2>
+      <h4>Last Updated</h4>
     </td>
     <td>
-      <h2>Battery Type</h2>
+      <h4>Battery Type</h4>
     </td>
     <td>
-      <h2>Owner</h2>
+      <h4>Owner</h4>
     </td>
   </tr>
 
@@ -24,16 +24,16 @@
 
 	  <tr>
 	    <td>
-	      <h3><%= link_to b.lbid, b %></h3>
+	      <%= link_to b.lbid, b %>
 	    </td>
 	    <td>
-	      <h3><%= b.updated_at.to_formatted_s(:short) %></h3>
+	      <%= b.updated_at.to_formatted_s(:short) %>
 	    </td>
 	    <td>
-	      <h3><%= b.battery_type.name %></h3>
+	      <%= b.battery_type.name %>
 	    </td>
 	    <td>
-	      <h3><%= link_to b.rider.name, b.rider %></h3>
+	      <%= link_to b.rider.name, b.rider %>
 	    <td>
 	      <%= link_to "Edit", edit_rider_battery_path(b.rider_id, b.id) %>
 	    </td>
