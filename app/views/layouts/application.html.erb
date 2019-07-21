@@ -9,13 +9,15 @@
   </head>
 
   <body>
+  <div id="nav">
     <%= link_to "Dashboard", root_path %>
     <%= link_to "Riders", riders_path %>
     <%= link_to "Chargers", chargers_path %>
     <%= link_to "Batteries", batteries_path %>
     <%= link_to "Check In a Battery", new_check_in_path %>
-
-    <br><br>
+  </div>
+  <div id="container">
     <%= yield %>
+  </div>
   </body>
 </html>
